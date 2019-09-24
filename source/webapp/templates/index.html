@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2 class="text-center" > Welcome to our shop</h2>
+
+<p class="text-center mt-5">
+   <!--a href="#" class="btn btn-primary" >Add product</a> -->
+   <a href="#" class="btn btn-primary">Add product</a>
+</p>
+
+
+{% for product in products %}
+
+<div class="row justify-content-center">
+    <div class="card mt-3" style="width: 75%;">
+      <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'product_view' product.pk %}">{{ product.name }} </a> {{ product.category  }}</h5>
+        <p class="card-text">{{ product.price }}</p>
+        <a href="#" class="card-link btn btn-outline-primary">Edit</a>
+        <a href="#" class="card-link btn btn-outline-primary">Delete</a>
+      </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

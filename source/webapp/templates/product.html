@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product }}{% endblock %}
+
+{% block menu %}
+
+    <li><a href="#">Edit</a></li>
+
+{% endblock %}
+
+{% block content %}
+    <!--<p class="center"><b>{{ task.description }}</b></p>
+    <p class="center">Task status <b> {{ task.status }}</b></p>
+    <p class="center">Finish date<b>  {{ task.date_perf }}</b></p> -->
+    <table style="width: 100%">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                 Description
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                balance
+            </th>
+            <th>
+                price
+            </th>
+        </tr>
+        <tr>
+            <td>
+                {{ product.name }}
+            </td>
+            <td>
+                 {{ product.description }}
+            </td>
+            <td>
+                {{ product.category }}
+            </td>
+            <td>
+                {{ product.balance}}
+            </td>
+            <td>
+                {{ product.price}}
+            </td>
+        </tr>
+    </table>
+{% endblock %}
