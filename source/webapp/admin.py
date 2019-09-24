@@ -8,7 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ['category']
     list_display_links = ['pk', 'name']
     search_fields = ['name', 'category', 'price']
-    fields = ['name', 'description', 'category']
+    fields = ['name', 'description', 'category', 'balance', 'price']
 
 
 admin.site.register(Product, ProductAdmin)
