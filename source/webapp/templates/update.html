@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+{% block title %}Update Product{% endblock %}
+
+{% block menu %}
+
+    <li><a href="{% url 'product_view' product.pk %}">view</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+    <h3>Update product </h3>
+
+    <form method="POST" action="{% url "update_product" product.pk %}">
+                 {% include 'partial/product_form.html' %}
+              <p><input type="submit" value="Submit"></p>
+
+    </form>
+
+{% endblock %}

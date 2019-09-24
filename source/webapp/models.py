@@ -19,4 +19,4 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2, null=False, blank=False, verbose_name='цена')
 
     def __str__(self):
-        return self.description
+        return self.name
