@@ -52,10 +52,10 @@ def product_update_view(request, pk):
     elif request.method == 'POST':
         form = ProductForm(data=request.POST)
         if form.is_valid():
-            product.name = form.cleaned_data['name'],
-            product.description = form.cleaned_data['description'],
-            product.category = form.cleaned_data['category'],
-            product.balance = form.cleaned_data['balance'],
+            product.name = form.cleaned_data['name']
+            product.description = form.cleaned_data['description']
+            product.category = form.cleaned_data['category']
+            product.balance = form.cleaned_data['balance']
             product.price = form.cleaned_data['price']
             product.save()
             return redirect('product_view', pk=product.pk)
